@@ -30,6 +30,7 @@ userRouter.post("/", async (request, response) => {
     const user = await createUser({email, password, name});
     response.send({
         user: mapUser(user),
+        accessToken: createAccesToken(user)
     });
 });
 
