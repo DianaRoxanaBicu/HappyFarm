@@ -22,6 +22,7 @@ app.get('/', (req: Request, res: Response) => {
 app.use("/api", apiRouter);
 
 app.listen(port, async () => {
+    console.log(`[server]: Database uri is ${database_uri}`);
     await mongoose.connect(database_uri, {dbName: "HappyFarm"});
     console.log(`[server]: Server is running at http://localhost:${port}`);
 });
