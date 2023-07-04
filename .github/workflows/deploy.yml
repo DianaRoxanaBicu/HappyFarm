@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Deploy to server
-        run: docker-compose up -d --build
+        run: docker compose up -d --build
